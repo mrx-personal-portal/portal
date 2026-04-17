@@ -3,73 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy | Portal</title>
+    <title>Kishan Kumar Roy | Portfolio</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f7f6; color: #333; }
-        
-        header { 
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); 
-            color: #fff; 
-            padding: 80px 20px; 
-            text-align: center; 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
         }
-        
-        header h1 { font-size: 2.8em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .address { font-size: 1.1em; margin-bottom: 25px; opacity: 0.9; }
 
-        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        
-        .btn { 
-            display: inline-block; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 30px; 
-            font-weight: bold; 
-            transition: 0.3s; 
+        /* Navigation Bar */
+        nav {
+            background-color: #1a252f;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        section {
+            padding: 80px 20px 40px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 6px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        p {
+            line-height: 1.6;
             font-size: 16px;
-            color: #fff;
         }
 
-        .btn-email { background-color: #d44638; } /* Red */
-        .btn-call { background-color: #34b7f1; } /* Blue */
-        .btn-whatsapp { background-color: #25D366; } /* Green */
-        .btn-link { background-color: #555; } /* Grey */
+        /* Document List Styling */
+        .doc-list {
+            list-style: none;
+            padding: 0;
+        }
 
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); opacity: 0.9; }
+        .doc-list li {
+            background: #f8f9fa;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s;
+        }
 
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .footer { text-align: center; padding: 20px; color: #777; font-size: 14px; }
+        .doc-list li:hover {
+            transform: translateY(-2px);
+            border-color: #3498db;
+        }
+
+        .btn-view {
+            text-decoration: none;
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-view:hover {
+            background: #2980b9;
+        }
+
+        /* Contact Details */
+        .contact-info p {
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Kishan Kumar Roy</h1>
-        <p class="address">
-            Champaberia, Bongaon, North 24 Parganas, <br>
-            West Bengal, Pin - 743235
-        </p>
-
-        <div class="btn-container">
-            <a href="mailto:kishannbhs2002@gmail.com" class="btn btn-email">Send Email</a>
-            
-            <a href="tel:+919563790650" class="btn btn-call">Call Me</a>
-            
-            <a href="https://wa.me/919563790650" target="_blank" class="btn btn-whatsapp">WhatsApp Me</a>
-            
-            <a href="https://mrx-personal-portal.github.io/portal/" class="btn btn-link">Visit Website</a>
-        </div>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#office-docs">Office Documents</a></li>
+            <li><a href="#personal-docs">Personal Documents</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <h2 style="color: #1a2a6c; border-bottom: 2px solid #fdbb2d; padding-bottom: 10px; margin-bottom: 20px;">Welcome to My Portal</h2>
-        <p>I am a Junior Engineer (Mechanical) with expertise in Baggage Conveyor Systems (BCS). This is my professional digital space where you can connect with me directly through the links above.</p>
+        
+        <section id="home">
+            <h2>About Me</h2>
+            <p>I am <b>Kishan Kumar Roy</b>, a dedicated <b>Junior Mechanical Engineer</b> at Gannon Dunkerley & Co., Ltd. With a strong background in Mechanical Engineering, I specialize in the installation, commissioning, and maintenance of <b>Baggage Conveyor Systems (BCS)</b> at various airports across India.</p>
+        </section>
+
+        <section id="office-docs">
+            <h2>Office Documents</h2>
+            <ul class="doc-list">
+                <li>Annual Maintenance Contract (AMC) Reports - Calicut Airport <a href="#" class="btn-view">VIEW FILE</a></li>
+                <li>Monthly Maintenance Visit Report - Kandla Airport <a href="#" class="btn-view">VIEW FILE</a></li>
+                <li>Emergency Breakdown & Repair Logs - Bhuj Airport <a href="#" class="btn-view">VIEW FILE</a></li>
+                <li>Technical Service Reports (Baggage Handling System) <a href="#" class="btn-view">VIEW FILE</a></li>
+            </ul>
+        </section>
+
+        <section id="personal-docs">
+            <h2>Personal Documents</h2>
+            <ul class="doc-list">
+                <li>Diploma in Mechanical Engineering Certificate <a href="#" class="btn-view">DOWNLOAD</a></li>
+                <li>Professional Resume (Updated 2026) <a href="#" class="btn-view">DOWNLOAD</a></li>
+                <li>Government ID & Identity Records <a href="#" class="btn-view">VIEW</a></li>
+                <li>Experience Certificates & Training Records <a href="#" class="btn-view">VIEW</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p><b>Email:</b> your.email@example.com</p>
+                <p><b>Phone:</b> +91 00000 00000</p>
+                <p><b>LinkedIn:</b> linkedin.com/in/kishankumarroy</p>
+                <p><b>Current Location:</b> Kolkata, West Bengal</p>
+            </div>
+        </section>
+
     </div>
 
-    <div class="footer">
-        &copy; 2026 Kishan Kumar Roy. All Rights Reserved.
-    </div>
+    <footer>
+        &copy; 2026 Kishan Kumar Roy | Professional Portfolio
+    </footer>
 
 </body>
 </html>
