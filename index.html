@@ -3,189 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy | Junior Engineer (Mech.)</title>
+    <title>SYSTEM MR. X | CORE UNIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
     <style>
-        /* Professional Theme Colors */
-        :root {
-            --primary-dark: #2c3e50;
-            --accent-blue: #3498db;
-            --light-bg: #f4f7f6;
-            --text-main: #333;
-        }
-
+        /* CSS: Styling and Animations */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-main);
-            line-height: 1.6;
+            background-color: #050505;
+            color: #00ff41;
+            font-family: 'Roboto Mono', monospace;
+            overflow-x: hidden;
         }
 
-        /* Top Notification Bar */
-        .notification-bar {
-            background-color: var(--primary-dark);
-            color: #ecf0f1;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--accent-blue);
+        /* Matrix Background Effect Simulation */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
-                        url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        /* Main Container */
         .container {
-            max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 10px;
+            text-shadow: 0 0 20px #00ff41;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .status-bar {
+            border: 1px solid #00ff41;
+            display: inline-block;
+            padding: 5px 20px;
+            margin: 20px 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Photo/Card Section with Animation */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
         }
 
         .card {
-            background: white;
-            padding: 35px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
+            border: 1px solid #00ff41;
+            padding: 20px;
+            background: rgba(0, 255, 65, 0.02);
+            transition: 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        h2 {
-            color: var(--primary-dark);
-            border-bottom: 2px solid var(--accent-blue);
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-size: 1.4rem;
+        .card:hover {
+            background: #00ff41;
+            color: #000;
+            box-shadow: 0 0 30px #00ff41;
+            transform: translateY(-10px);
         }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
+        .card h3 { font-family: 'Orbitron', sans-serif; margin-bottom: 10px; }
+
+        /* Animation for images or placeholder */
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
         }
 
-        .job-title {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--accent-blue);
+        /* Terminal Style Footer */
+        .terminal {
+            margin-top: 100px;
+            background: #000;
+            border-top: 2px solid #00ff41;
+            padding: 20px;
+            text-align: left;
+            font-size: 0.7rem;
+            opacity: 0.7;
         }
 
-        .company-name {
-            font-style: italic;
-            color: #7f8c8d;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-dark);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background-color: var(--accent-blue);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-
-        .contact-btn:hover {
-            background-color: #2980b9;
+        /* Button CSS */
+        .access-btn {
+            background: none;
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            padding: 10px 20px;
+            font-family: 'Roboto Mono', monospace;
+            margin-top: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="notification-bar">
-        Currently available for Mechanical Engineering opportunities in Kolkata and Pan-India.
-    </div>
-
-    <header class="hero">
-        <h1>KISHAN KUMAR ROY</h1>
-        <p>Junior Engineer (Mechanical) | Baggage Conveyor Systems Specialist</p>
-    </header>
-
     <div class="container">
-        
-        <section class="card">
-            <h2>Professional Experience</h2>
-            <div class="job-header">
-                <span class="job-title">Junior Engineer (Mech.)</span>
-                <span class="company-name">Gannon Dunkerley & Co., Ltd.</span>
+        <p style="font-size: 0.7rem;">[ INITIALIZING SECURE PROTOCOL... ]</p>
+        <h1>SYSTEM MR. X</h1>
+        <div class="status-bar">Location: Gandhidham Unit | Status: Online</div>
+
+        <div class="grid">
+            <div class="card" onclick="checkAccess('OFFICE DATA')">
+                <div class="icon">📁</div>
+                <h3>Office & Bills</h3>
+                <p>Maintenance bills, AMC reports for Calicut & Bhuj.</p>
+                <button class="access-btn">Unlock Vault</button>
             </div>
-            <ul>
-                <li>Specialized in the installation, commissioning, and maintenance of Airport Baggage Conveyor Systems (BCS).</li>
-                <li>Experienced in handling mechanical operations at Calicut International Airport and Bhuj Airport.</li>
-                <li>Expert in preparing Annual Maintenance Contract (AMC) service reports and technical documentation.</li>
-                <li>Proficient in diagnosing mechanical breakdowns and implementing preventive maintenance schedules.</li>
-            </ul>
-        </section>
 
-        <section class="card">
-            <h2>Core Competencies</h2>
-            <ul>
-                <li><strong>Systems:</strong> Baggage Handling Systems (BHS), Conveyor Belt Alignment, and Industrial Machinery.</li>
-                <li><strong>Maintenance:</strong> Fault Diagnosis, Precision Lubrication, and Mechanical Component Repair.</li>
-                <li><strong>Tools & Reports:</strong> Technical Drafting, Service Report Generation, and AMC Management.</li>
-                <li><strong>Operations:</strong> Site Supervision, Project Scheduling, and Workforce Coordination.</li>
-            </ul>
-        </section>
+            <div class="card" onclick="checkAccess('ENGINEERING')">
+                <div class="icon">⚙️</div>
+                <h3>Mechanical Log</h3>
+                <p>Conveyor Belt, Chain, & Bearing maintenance logs.</p>
+                <button class="access-btn">View Reports</button>
+            </div>
 
-        <section class="card">
-            <h2>Education</h2>
-            <p><strong>Diploma in Mechanical Engineering</strong></p>
-            <p>Focused on core mechanical principles, industrial manufacturing, and engineering thermodynamics.</p>
-        </section>
-
+            <div class="card" onclick="checkAccess('PERSONAL')">
+                <div class="icon">👤</div>
+                <h3>Personal Unit</h3>
+                <p>Secure identity and private engineering assets.</p>
+                <button class="access-btn">Private Access</button>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <h3>Let's Connect for Professional Collaboration</h3>
-        <p>Seeking challenging roles in Mechanical Engineering and Project Maintenance.</p>
-        <a href="mailto:your-email@example.com" class="contact-btn">Email Me Directly</a>
-        <p style="margin-top: 20px; font-size: 12px; opacity: 0.6;">&copy; 2026 Kishan Kumar Roy. All Rights Reserved.</p>
-    </footer>
+    <div class="terminal">
+        > _USER_ID: KISHAN_KUMAR_ROY<br>
+        > _DESIGNATION: JUNIOR_ENGINEER_MECH<br>
+        > _FIRM: GANNON_DUNKERLEY_CO_LTD<br>
+        > _ENCRYPTION: AES-256 ACTIVE...
+    </div>
+
+    <script>
+        function checkAccess(unit) {
+            // JS Prompt for password
+            let pass = prompt("WARNING: SYSTEM " + unit + " IS PROTECTED. ENTER ENCRYPTION KEY:");
+            
+            // Tomar password ekhon '0000' rekhechi, eta pore bodlate parbe
+            if (pass === '0000') {
+                alert("ACCESS GRANTED. Welcome, Mr. X.");
+                // Ekhanei tumi pore tomar file-er link bosate parbe
+            } else {
+                alert("CRITICAL ERROR: ACCESS DENIED. Unauthorized attempt logged.");
+            }
+        }
+
+        // Animation Effect on Scroll
+        window.addEventListener('scroll', () => {
+            console.log("System Tracking Active...");
+        });
+    </script>
 
 </body>
 </html>
