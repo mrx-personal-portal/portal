@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Animation Fix)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master New Welcome Anim)</title>
     <style>
         body {
             margin: 0;
@@ -75,7 +75,7 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            gap: 5px; /* এই গ্যাপটি টাইটেল এবং ওয়েলকাম নোটকে খুব কাছে রাখবে */
+            gap: 2px; /* টাইটেল এবং ওয়েলকাম নোটকে খুব কাছে রাখার জন্য */
         }
 
         /* --- Animation Logic: সিঙ্ক্রোনাইজড ১৪ সেকেন্ডের লুপ --- */
@@ -102,7 +102,7 @@
             animation: juniorSequence 14s ease-in-out infinite;
         }
 
-        /* ওয়েলকাম নোট: এখন স্লাইডিং ছাড়া তোমার নামের মতো অ্যানিমেশন হবে */
+        /* ওয়েলকাম নোট: নতুন এন্টার অ্যানিমেশন (Fade In + Slide Up) */
         .welcome-msg {
             font-size: 1.05em;
             color: #e0e0e0;
@@ -110,22 +110,32 @@
             line-height: 1.4;
             font-weight: 300;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-            margin-top: 10px; /* সামান্য গ্যাপ যাতে মিশে না যায় */
+            margin-top: 8px; /* সামান্য গ্যাপ */
             opacity: 0;
             display: block;
-            animation: kishanSequence 14s ease-in-out infinite; /* তোমার নামের অ্যানিমেশন ফলো করছে */
+            /* নতুন এন্টার অ্যানিমেশন (msgEnter) শুধুমাত্র প্রবেশের সময় কাজ করবে */
+            animation: msgEnter 14s ease-in-out infinite;
         }
 
+        /* তোমার নামের অরিজিনাল অ্যানিমেশন (Unchanged) */
         @keyframes kishanSequence {
             0% { opacity: 0; transform: translateX(150%); } 
             15%, 75% { opacity: 1; transform: translateX(0); }   
             85%, 100% { opacity: 0; transform: translateY(150px); }
         }
 
+        /* পদবির অরিজিনাল অ্যানিমেশন (Unchanged) */
         @keyframes juniorSequence {
             0% { opacity: 0; transform: translateX(-150%); } 
             20%, 75% { opacity: 1; transform: translateX(0); }   
             85%, 100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        /* ওয়েলকাম নোটের নতুন অ্যানিমেশন: নিচ থেকে ভেসে আসবে (Slide Up) */
+        @keyframes msgEnter {
+            0% { opacity: 0; transform: translateY(50px); } /* নিচ থেকে শুরু হবে */
+            25%, 75% { opacity: 1; transform: translateY(0); }   /* মাঝখানে হোল্ড করবে */
+            85%, 100% { opacity: 0; transform: translateY(150px); } /* সবার সাথে নিচে চলে যাবে */
         }
 
         .content-area { height: 25vh; background: white; }
