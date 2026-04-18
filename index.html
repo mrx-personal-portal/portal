@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kishan Kumar Roy - Portfolio (K1 Master Verified Final)</title>
     <style>
-        /* স্মুথ স্ক্রলিং */
         html { scroll-behavior: smooth; }
-        
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #ffffff;
             overflow-x: hidden;
@@ -18,152 +15,74 @@
 
         /* --- Navbar --- */
         .navbar {
-            position: absolute;
-            top: 15px;
-            width: 96%;
-            left: 2%;
-            background: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 0;
-            z-index: 2000;
+            position: absolute; top: 15px; width: 96%; left: 2%;
+            background: transparent; display: flex;
+            justify-content: center; align-items: center;
+            padding: 10px 0; z-index: 2000;
         }
-
         .nav-links { display: flex; align-items: center; }
-
         .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 600;
-            font-size: 0.82em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
+            color: white; text-decoration: none; margin: 0 10px;
+            font-weight: 600; font-size: 0.82em; text-transform: uppercase;
+            letter-spacing: 1px; cursor: pointer;
             background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(10px);
-            padding: 10px 18px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); padding: 10px 18px;
+            border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
+        .cv-btn { background: #e67e22 !important; border: 1px solid #e67e22 !important; }
 
-        .cv-btn { background: #e67e22 !important; border: 1px solid #e67e22 !important; box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); }
-
-        /* --- Custom Admin Modal (The White Box Popup) --- */
+        /* --- Custom Admin Modal (White Center Popup) --- */
         .modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            display: none; /* ডিফল্টভাবে লুকানো থাকবে */
-            justify-content: center;
-            align-items: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px);
+            display: none; justify-content: center; align-items: center;
             z-index: 3000;
         }
-
         .admin-modal {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 20px;
-            width: 320px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            text-align: center;
-            border-bottom: 5px solid #e67e22;
+            background: #ffffff; padding: 35px; border-radius: 20px;
+            width: 320px; box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            text-align: center; border-bottom: 5px solid #e67e22;
             animation: modalFadeIn 0.3s ease-out;
         }
-
-        @keyframes modalFadeIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        
-        .admin-modal h3 { color: #2c3e50; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        
-        .admin-modal input {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-            font-size: 0.9em;
-        }
-
+        @keyframes modalFadeIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .admin-modal h3 { color: #2c3e50; margin-bottom: 20px; text-transform: uppercase; }
+        .admin-modal input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; outline: none; }
         .modal-btns { display: flex; justify-content: space-around; margin-top: 20px; }
-        
-        .login-submit { background: #e67e22; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: 700; transition: 0.3s; }
-        .login-submit:hover { background: #d35400; }
-        
-        .cancel-btn { background: #95a5a6; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-        .cancel-btn:hover { background: #7f8c8d; }
+        .login-submit { background: #e67e22; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: 700; }
+        .cancel-btn { background: #95a5a6; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; }
 
-        /* --- Header Section: Strictly 75% Height --- */
+        /* --- Header Section (75% Height) --- */
         .header-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; 
-            align-items: center;
-            height: 75vh; 
-            width: 100%;
+            display: flex; flex-direction: column; justify-content: flex-start; 
+            align-items: center; height: 75vh; width: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover; background-position: center;
             color: #ffffff; text-align: center; position: relative;
             border-bottom: 3px solid #e67e22; 
         }
-
-        /* ২৫০ পিক্সেল গ্যাপ রুল */
-        .header-content {
-            padding-top: 250px; 
-            max-width: 850px;
-            padding-left: 20px;
-            padding-right: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        /* --- Animation Logic: ১৪ সেকেন্ডের লুপ --- */
+        .header-content { padding-top: 250px; max-width: 850px; }
         .name-animated { font-size: 3.5em; letter-spacing: 3px; text-transform: uppercase; font-weight: 800; animation: kishanSequence 14s ease-in-out infinite; display: block; }
         .title-animated { font-size: 1.5em; color: #f1f1f1; font-weight: 400; animation: juniorSequence 14s ease-in-out infinite; display: block; }
         .welcome-msg { font-size: 1.05em; color: #e0e0e0; font-style: italic; opacity: 0; animation: msgEnter 14s ease-in-out infinite; display: block; }
-
         @keyframes kishanSequence { 0% { opacity: 0; transform: translateX(150%); } 15%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes juniorSequence { 0% { opacity: 0; transform: translateX(-150%); } 20%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes msgEnter { 0% { opacity: 0; transform: translateY(50px); } 25%, 75% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
 
         /* --- Content Styling --- */
-        .section-container { padding: 60px 20px 20px 20px; max-width: 850px; margin: 0 auto; text-align: left; }
-        .section-heading { font-size: 2em; color: #2c3e50; position: relative; display: inline-block; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; border-radius: 2px; }
-        .about-content { font-size: 1.15em; line-height: 1.8; color: #444; text-align: justify; }
-        .orange-highlight { color: #e67e22; font-weight: 700; }
-
+        .section-container { padding: 60px 20px; max-width: 850px; margin: 0 auto; text-align: left; }
+        .section-heading { font-size: 2em; color: #2c3e50; position: relative; display: inline-block; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; }
+        .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; }
         .item-row { margin-bottom: 25px; border-left: 3px solid #e67e22; padding-left: 20px; }
-        .item-title { font-size: 1.2em; font-weight: 700; color: #333; }
+        .item-title { font-size: 1.2em; font-weight: 700; }
         .item-subtitle { color: #e67e22; font-weight: 600; margin: 3px 0; }
-        .item-date { font-size: 0.9em; color: #777; font-style: italic; }
-
+        .orange-highlight { color: #e67e22; font-weight: 700; }
         .partition-line { width: 80%; height: 1px; background: linear-gradient(to right, transparent, #e67e22, transparent); margin: 40px auto; opacity: 0.5; }
 
-        /* --- Footer Section --- */
-        footer {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
-            margin-top: 50px;
-            width: 100%;
-        }
-
-        .footer-container { max-width: 850px; margin: 0 auto; }
-        .footer-title { font-size: 1.6em; color: #e67e22; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        .footer-info { color: #aaa; line-height: 1.8; font-size: 1em; margin-bottom: 30px; }
-        .footer-info a { color: #e67e22; text-decoration: none; transition: opacity 0.3s; }
-        .footer-bottom { border-top: 1px solid #333; padding-top: 20px; font-size: 0.85em; color: #555; }
+        /* --- Footer --- */
+        footer { background-color: #111111; color: #ffffff; padding: 60px 20px; text-align: center; width: 100%; }
+        .footer-info a { color: #e67e22; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -200,7 +119,7 @@
     <section class="section-container">
         <h2 class="section-heading">About Me</h2>
         <div class="about-content">
-            <p>I am a Mechanical Engineer by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the world of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>.</p>
+            <p>I am a Mechanical Engineer by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the world of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>. My professional core lies in troubleshooting mechanical intricacies and ensuring seamless system operations.</p>
         </div>
     </section>
 
@@ -226,7 +145,7 @@
         <h2 class="section-heading">Education</h2>
         <div class="item-row">
             <div class="item-title">Diploma in Mechanical Engineering</div>
-            <div class="item-subtitle">AMS College of Polytechnic</div>
+            <div class="item-subtitle">AMS College of Polytechnic (WBSCTVESD)</div>
             <div class="item-date">2025 | 71.6% GPA- 7.4</div>
         </div>
         <div class="item-row">
@@ -236,12 +155,26 @@
         </div>
         <div class="item-row">
             <div class="item-title">HIGHER SECONDARY (WBCHSE)</div>
-            <div class="item-subtitle">New Bongaon High School</div>
+            <div class="item-subtitle">New Bongaon High School (WBCHSE)</div>
             <div class="item-date">2019 | 66.4%</div>
+        </div>
+        <div class="item-row">
+            <div class="item-title">MADHYAMIK (WBBSE)</div>
+            <div class="item-subtitle">New Bongaon High School (WBBSE)</div>
+            <div class="item-date">2017 | 48.28%</div>
         </div>
     </section>
 
     <div class="partition-line"></div>
+
+    <section class="section-container">
+        <h2 class="section-heading">Certifications</h2>
+        <div class="item-row">
+            <div class="item-title">Industrial Training (Pipe Fitter)</div>
+            <div class="item-subtitle">Larsen & Toubro Construction Limited</div>
+            <div class="item-date">2021</div>
+        </div>
+    </section>
 
     <footer id="contact-info">
         <div class="footer-container">
@@ -262,18 +195,14 @@
     <script>
         function openModal() { document.getElementById("modalOverlay").style.display = "flex"; }
         function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
-
         function verifyLogin() {
             const user = document.getElementById("adminUser").value;
             const pass = document.getElementById("adminPass").value;
             if (user === "admin" && pass === "kishan123") {
                 alert("Access Granted!");
                 window.location.href = "admin-dashboard.html"; 
-            } else {
-                alert("Invalid Credentials!");
-            }
+            } else { alert("Invalid Credentials!"); }
         }
     </script>
-
 </body>
 </html>
