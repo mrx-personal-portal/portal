@@ -13,35 +13,35 @@
             overflow-x: hidden;
         }
 
-        /* --- Navigation: Glassmorphism style at the top --- */
+        /* --- Navigation Bar: Glassmorphism style at the top --- */
         .navbar {
             position: absolute;
-            top: 10px;
+            top: 15px;
             width: 100%;
             background: transparent;
             display: flex;
             justify-content: center;
-            padding: 20px 0;
+            padding: 10px 0;
             z-index: 1000;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 600;
-            font-size: 0.9em;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
             background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 10px 22px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 20px;
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
 
         .navbar a:hover {
@@ -58,6 +58,7 @@
             align-items: center;
             height: 75vh; 
             width: 100%;
+            /* Your stable engineering image */
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover;
@@ -69,14 +70,14 @@
         }
 
         .header-content {
-            margin-top: 50px; 
-            max-width: 800px;
+            margin-top: 60px; 
+            max-width: 850px;
             padding: 0 20px;
         }
 
         /* --- Animation Logic --- */
         .name-animated {
-            font-size: 3.8em;
+            font-size: 3.5em;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 800;
@@ -86,9 +87,9 @@
         }
 
         .title-animated {
-            font-size: 1.6em;
+            font-size: 1.5em;
             color: #f1f1f1;
-            margin-top: 10px;
+            margin-top: 8px;
             font-weight: 400;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -97,9 +98,8 @@
             animation: juniorSequence 12s ease-in-out infinite;
         }
 
-        /* --- New Welcome Message Style --- */
         .welcome-msg {
-            font-size: 1.1em;
+            font-size: 1.05em;
             color: #e0e0e0;
             margin-top: 25px;
             font-style: italic;
@@ -122,4 +122,130 @@
             0% { opacity: 0; transform: translateX(-150%); } 
             20% { opacity: 1; transform: translateX(0); }   
             65% { opacity: 1; transform: translateX(0); }   
-            80% { opacity: 0; transform: translateY(1
+            80% { opacity: 0; transform: translateY(150px); } 
+            100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        @keyframes msgSequence {
+            0% { opacity: 0; transform: scale(0.9); }
+            25% { opacity: 0; } 
+            35% { opacity: 1; transform: scale(1); }   
+            65% { opacity: 1; transform: scale(1); }
+            80% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 0; }
+        }
+
+        /* --- Login Modal (Popup) --- */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 280px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .content-area {
+            height: 25vh;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="javascript:void(0)" onclick="showLogin('Personal Documents')">Personal Docs</a>
+        <a href="javascript:void(0)" onclick="showLogin('Official Documents')">Official Docs</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <header class="header-section">
+        <div class="header-content">
+            <span class="name-animated">Kishan Kumar Roy</span>
+            <span class="title-animated">Junior Engineer (Mechanical)</span>
+            <p class="welcome-msg">
+                Welcome to the Professional Workspace of Kishan Kumar Roy. Dedicated to precision in Mechanical Engineering, innovative design, and seamless technical solutions. Explore the journey of building efficiency through engineering excellence.
+            </p>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle" style="color:#333; margin-bottom: 20px;">Login</h3>
+            <input type="text" placeholder="User ID">
+            <input type="password" placeholder="Password">
+            <button onclick="alert('Access Restricted: Validation Required')">Login</button>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <p>Interface is ready. Scroll to explore more.</p>
+    </div>
+
+    <script>
+        function showLogin(title) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('loginModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').style.display = "none";
+        }
+
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
