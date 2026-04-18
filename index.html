@@ -5,92 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kishan Kumar Roy - Portfolio</title>
     <style>
-        /* CSS Reset for a clean slate */
-        html, body {
+        body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Ensure body can take up full height */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #f4f7f6;
-            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+            overflow-x: hidden;
         }
 
-        /* --- Updated: Full-Screen Header --- */
+        /* --- Updated: Covering 75% (3/4th) of the screen --- */
         .header-section {
-            display: flex; /* Flexbox for vertical centering of text */
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             
-            /* --- Breathing Room (Breath/Height) is now Full Screen (100vh) --- */
-            height: 100vh; 
+            /* স্ক্রিনের উচ্চতার ৭৫ শতাংশ জায়গা নেবে */
+            height: 75vh; 
             width: 100%;
             
-            /* Background remains mostly the same but covers full viewport */
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Parallax effect for a premium feel */
             
             color: #ffffff;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border-bottom: 5px solid #e67e22; /* Mechanical orange accent */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-bottom: 5px solid #e67e22;
         }
 
-        /* Container for animated content */
+        /* Animation Container */
         .header-content {
-            opacity: 0; /* Initially hidden for animation */
-            transform: translateY(30px); /* Slightly down initially */
-            animation: slideInFade 1.2s ease-out forwards; /* Run animation once */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInFade 1.2s ease-out forwards;
         }
 
-        /* Keyframes for the Entrance Animation (Slide In & Fade In) */
         @keyframes slideInFade {
             to {
-                opacity: 1; /* Fade in */
-                transform: translateY(0); /* Move back to original position */
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* Text Styling (Name & Designation) */
         .header-section h1 {
             margin: 0;
-            font-size: 4.5em; /* Large, bold name */
-            letter-spacing: 4px;
+            font-size: 3.8em;
+            letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 800;
-            text-shadow: 4px 4px 12px rgba(0,0,0,0.8); 
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8); 
         }
 
         .header-section p.designation {
-            font-size: 1.8em;
-            color: #f1f1f1;
-            margin: 15px 0 0 0;
+            font-size: 1.6em;
+            color: #ffffff;
+            margin: 10px 0 0 0;
             font-weight: 400;
             letter-spacing: 2px;
             text-transform: uppercase;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
-        
-        /* Ensure all text uses full animation container */
-        .header-section .animated-item {
-            display: block;
-        }
 
+        /* Placeholder for the next section - just to see the gap */
+        .next-section-preview {
+            height: 300px;
+            padding: 40px;
+            text-align: center;
+            color: #333;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
 
     <header class="header-section">
         <div class="header-content">
-            <h1 class="animated-item">Kishan Kumar Roy</h1>
-            <p class="designation animated-item">Junior Engineer (Mechanical)</p>
+            <h1>Kishan Kumar Roy</h1>
+            <p class="designation">Junior Engineer (Mechanical)</p>
         </div>
     </header>
+
+    <div class="next-section-preview">
+        <h2>Content will start from here...</h2>
+        <p>This is the 25% area left for your details.</p>
+    </div>
 
 </body>
 </html>
