@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Final with About Me)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master with BHS Summary)</title>
     <style>
         body {
             margin: 0;
@@ -127,10 +127,10 @@
             85%, 100% { opacity: 0; transform: translateY(150px); }
         }
 
-        /* --- About Me Section --- */
+        /* --- About Me Section: প্রফেশনাল ডিজাইন --- */
         .about-section {
             padding: 60px 20px;
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: left;
         }
@@ -140,47 +140,38 @@
             color: #2c3e50;
             position: relative;
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .about-heading::after {
             content: '';
             position: absolute;
             left: 0;
-            bottom: -5px;
-            width: 50px;
-            height: 3px;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
             background-color: #e67e22;
+            border-radius: 2px;
         }
 
         .about-content {
-            font-size: 1.1em;
+            font-size: 1.15em;
             line-height: 1.8;
-            color: #555;
+            color: #444;
+            text-align: justify;
         }
 
-        .about-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
+        .highlight-text {
+            color: #2c3e50;
+            font-weight: 600;
         }
 
-        .about-list li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .about-list li::before {
-            content: '•';
+        .orange-highlight {
             color: #e67e22;
-            font-weight: bold;
-            font-size: 1.5em;
-            position: absolute;
-            left: 0;
-            top: -5px;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -211,12 +202,12 @@
     <section class="about-section">
         <h2 class="about-heading">About Me</h2>
         <div class="about-content">
-            <p>আমি একজন পেশাদার মেকানিক্যাল ইঞ্জিনিয়ার যার ব্যাগেজ কনভেয়র সিস্টেমের (BCS) ইনস্টলেশন এবং মেইনটেন্যান্স-এ ৩ বছরেরও বেশি অভিজ্ঞতা রয়েছে।</p>
-            <ul class="about-list">
-                <li>Baggage Conveyor System (BCS) বিশেষজ্ঞ।</li>
-                <li>মেকানিক্যাল ডিজাইন এবং ইন্ডাস্ট্রিয়াল অটোমেশন নিয়ে কাজ করতে আগ্রহী।</li>
-                <li>পেশাদারিত্ব এবং নিখুঁত কাজের প্রতি দায়বদ্ধ।</li>
-            </ul>
+            <p>
+                I am a <span class="highlight-text">Mechanical Engineer</span> by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the complex world of installation, commissioning, and maintenance of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>. My professional core lies in troubleshooting mechanical intricacies and ensuring seamless system operations with precision.
+            </p>
+            <p>
+                Beyond the gears and blueprints, I find my solace in the tranquility of nature and the grandeur of the mountains. This connection with the natural world teaches me patience and resilience—qualities that I directly apply to my engineering projects. I believe a successful engineer doesn't just understand machines; they draw inspiration from the inherent discipline of nature. I am constantly striving to evolve through a blend of creative problem-solving, technical expertise, and unwavering integrity.
+            </p>
         </div>
     </section>
 
