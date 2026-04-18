@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master Fix)</title>
     <style>
-        /* --- K1 Original Design Elements --- */
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f6; overflow-x: hidden; }
 
+        /* --- Navbar: Extreme Top --- */
         .navbar {
             position: absolute; top: 15px; width: 96%; left: 2%; background: transparent;
             display: flex; justify-content: center; align-items: center; padding: 10px 0; z-index: 1000;
         }
 
-        .nav-links a, .main-login-btn {
+        .nav-links a {
             color: white; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.82em;
             text-transform: uppercase; letter-spacing: 1px; cursor: pointer;
             background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
@@ -23,35 +23,42 @@
 
         .cv-btn { background: #e67e22 !important; border: 1px solid #e67e22 !important; box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); }
         
+        /* --- Login Button: Extreme Right --- */
         .login-container { position: absolute; right: 0; }
-        .main-login-btn { background: #007bff !important; border: 1px solid #007bff !important; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); }
+        .main-login-btn { 
+            background: #007bff !important; color: white; border: none; padding: 10px 20px; 
+            border-radius: 50px; font-weight: bold; cursor: pointer; text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); transition: 0.3s;
+        }
 
+        /* --- Header: Added Large Gap (Padding Top) --- */
         .header-section {
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            height: 75vh; width: 100%; position: relative;
+            height: 85vh; width: 100%; position: relative;
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover; background-position: center; color: #ffffff; text-align: center;
+            padding-top: 100px; /* এই প্যাডিংটিই নেভিগেশন বারের সাথে গ্যাপ বাড়াবে */
         }
 
-        /* --- K1 Original Animations (14s Loop) --- */
-        .name-animated { font-size: 3.5em; font-weight: 800; animation: kishanSequence 14s infinite; display: block; }
-        .title-animated { font-size: 1.5em; margin-top: 8px; animation: juniorSequence 14s infinite; display: block; }
-        .welcome-msg { font-size: 1.05em; margin-top: 25px; font-style: italic; opacity: 0; animation: msgSequence 14s infinite; max-width: 800px; line-height: 1.6; }
+        /* --- Animations (14s Loop) --- */
+        .name-animated { font-size: 3.5em; font-weight: 800; animation: kishanSequence 14s infinite; display: block; margin-bottom: 10px; }
+        .title-animated { font-size: 1.5em; animation: juniorSequence 14s infinite; display: block; color: #f1f1f1; }
+        .welcome-msg { font-size: 1.05em; margin-top: 40px; font-style: italic; opacity: 0; animation: msgSequence 14s infinite; max-width: 850px; line-height: 1.6; }
 
         @keyframes kishanSequence { 0% { opacity: 0; transform: translateX(150%); } 15%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes juniorSequence { 0% { opacity: 0; transform: translateX(-150%); } 20%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes msgSequence { 0%, 25% { opacity: 0; } 35%, 75% { opacity: 1; } 85%, 100% { opacity: 0; transform: translateY(100px); } }
 
-        /* --- Admin Panel Styles --- */
-        .admin-panel { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f2f5; z-index: 3000; padding: 20px; overflow-y: auto; color: #333; }
-        .admin-card { background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 800px; margin-left: auto; margin-right: auto; }
-        .admin-card input, .admin-card textarea { width: 95%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .save-btn { background: #27ae60; color: white; border: none; padding: 12px 20px; cursor: pointer; width: 100%; border-radius: 5px; font-weight: bold; font-size: 1em; }
-        
+        /* --- Dashboard Panel (Fullscreen) --- */
+        .admin-panel { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f2f5; z-index: 5000; padding: 30px; overflow-y: auto; color: #333; }
+        .admin-card { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 900px; margin-left: auto; margin-right: auto; }
+        .admin-card input, .admin-card textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .save-btn { background: #27ae60; color: white; border: none; padding: 15px; cursor: pointer; width: 100%; border-radius: 8px; font-weight: bold; font-size: 1.1em; }
+
         /* Modal Style */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-        .modal-content { background: white; margin: 15% auto; padding: 30px; border-radius: 12px; width: 300px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); }
+        .modal-content { background: white; margin: 12% auto; padding: 40px; border-radius: 15px; width: 320px; text-align: center; }
     </style>
 </head>
 <body>
@@ -59,13 +66,13 @@
     <nav class="navbar">
         <div class="nav-links">
             <a href="#">Home</a>
-            <a onclick="showLogin('Personal Documents')">Personal Docs</a>
-            <a onclick="showLogin('Official Documents')">Official Docs</a>
+            <a onclick="alert('Access Restricted: Use Master Login to edit content')">Personal Docs</a>
+            <a onclick="alert('Access Restricted: Use Master Login to edit content')">Official Docs</a>
             <a href="#">Contact</a>
             <a href="#" id="cvLink" download class="cv-btn">Download CV</a>
         </div>
         <div class="login-container">
-            <a onclick="showLogin('Master Login')" class="main-login-btn">Login</a>
+            <button onclick="showLogin()" class="main-login-btn">LOGIN (DASHBOARD)</button>
         </div>
     </nav>
 
@@ -74,22 +81,90 @@
             <span class="name-animated" id="dispName">Kishan Kumar Roy</span>
             <span class="title-animated" id="dispTitle">Junior Engineer (Mechanical)</span>
             <p class="welcome-msg" id="dispWelcome">
-                Welcome to the Professional Workspace of Kishan Kumar Roy. Dedicated to precision in Mechanical Engineering, innovative design, and seamless technical solutions. Explore the journey of building efficiency through engineering excellence.
+                Loading your customized welcome message...
             </p>
         </div>
     </header>
 
     <div id="loginModal" class="modal">
         <div class="modal-content">
-            <h3 id="modalTitle" style="color:#2c3e50; margin-bottom:20px;">Login</h3>
-            <input type="text" id="userInput" placeholder="User ID" style="width:90%; padding:10px; margin:5px 0; border:1px solid #ddd; border-radius:5px;">
-            <input type="password" id="passInput" placeholder="Password" style="width:90%; padding:10px; margin:5px 0; border:1px solid #ddd; border-radius:5px;">
-            <button onclick="checkAccess()" style="width:100%; padding:10px; background:#007bff; color:white; border:none; border-radius:5px; margin-top:15px; font-weight:bold; cursor:pointer;">ACCESS DASHBOARD</button>
-            <button onclick="closeModal()" style="background:none; border:none; color:#e74c3c; cursor:pointer; margin-top:15px; font-size:0.9em;">Cancel</button>
+            <h3 style="color:#2c3e50; margin-top:0;">ADMIN ACCESS</h3>
+            <input type="text" id="userInput" placeholder="User ID">
+            <input type="password" id="passInput" placeholder="Password">
+            <button onclick="checkAccess()" style="width:100%; padding:12px; background:#007bff; color:white; border:none; border-radius:5px; margin-top:15px; font-weight:bold; cursor:pointer;">ENTER DASHBOARD</button>
+            <button onclick="closeModal()" style="background:none; border:none; color:#e74c3c; cursor:pointer; margin-top:15px;">Cancel</button>
         </div>
     </div>
 
     <div id="adminDashboard" class="admin-panel">
-        <div style="display:flex; justify-content:space-between; align-items:center; background:#2c3e50; color:white; padding:15px 30px; border-radius:8px; max-width:840px; margin: 0 auto 20px auto;">
-            <h2 style="margin:0;">K1 Control Panel</h2>
-            <button onclick="closeDash()" style="background:#e74c3c; color:white; border:none; padding:8px 15px; border
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#2c3e50; color:white; padding:20px 40px; border-radius:10px; max-width:900px; margin: 0 auto 30px auto;">
+            <h2 style="margin:0;">K1 Master Control</h2>
+            <button onclick="closeDash()" style="background:#e74c3c; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:bold;">EXIT & REFRESH</button>
+        </div>
+        
+        <div class="admin-card">
+            <h3 style="color:#e67e22; border-bottom:2px solid #e67e22; padding-bottom:10px;">Edit Home Page Information</h3>
+            <label>Update Name:</label>
+            <input type="text" id="editName">
+            <label>Update Designation:</label>
+            <input type="text" id="editTitle">
+            <label>Update Welcome Message:</label>
+            <textarea id="editWelcome" rows="6"></textarea>
+            <button class="save-btn" onclick="updateEverything()">SAVE ALL UPDATES</button>
+        </div>
+
+        <div class="admin-card">
+            <h3 style="color:#007bff; border-bottom:2px solid #007bff; padding-bottom:10px;">Security & Links</h3>
+            <label>Update CV Link (URL):</label>
+            <input type="text" id="editCV" placeholder="Paste your Google Drive link here">
+            <button class="save-btn" style="background:#007bff;" onclick="updateEverything()">UPDATE CV LINK</button>
+        </div>
+    </div>
+
+    <script>
+        const MASTER_ID = "kishan_admin";
+        const MASTER_PASS = "kishan@650";
+
+        function showLogin() { document.getElementById('loginModal').style.display = "block"; }
+        function closeModal() { document.getElementById('loginModal').style.display = "none"; }
+
+        function checkAccess() {
+            const u = document.getElementById('userInput').value;
+            const p = document.getElementById('passInput').value;
+            if(u === MASTER_ID && p === MASTER_PASS) {
+                document.getElementById('loginModal').style.display = "none";
+                document.getElementById('adminDashboard').style.display = "block";
+                loadCurrentValues();
+            } else { alert("Incorrect Credentials! Try again."); }
+        }
+
+        function loadCurrentValues() {
+            document.getElementById('editName').value = document.getElementById('dispName').innerText;
+            document.getElementById('editTitle').value = document.getElementById('dispTitle').innerText;
+            document.getElementById('editWelcome').value = document.getElementById('dispWelcome').innerText;
+            document.getElementById('editCV').value = localStorage.getItem('k_cv_url') || "";
+        }
+
+        function updateEverything() {
+            localStorage.setItem('k_n', document.getElementById('editName').value);
+            localStorage.setItem('k_t', document.getElementById('editTitle').value);
+            localStorage.setItem('k_w', document.getElementById('editWelcome').value);
+            localStorage.setItem('k_cv_url', document.getElementById('editCV').value);
+            alert("Success: Website Updated!"); 
+            location.reload();
+        }
+
+        function closeDash() { location.reload(); }
+
+        window.onload = function() {
+            if(localStorage.getItem('k_n')) document.getElementById('dispName').innerText = localStorage.getItem('k_n');
+            if(localStorage.getItem('k_t')) document.getElementById('dispTitle').innerText = localStorage.getItem('k_t');
+            if(localStorage.getItem('k_w')) document.getElementById('dispWelcome').innerText = localStorage.getItem('k_w');
+            else {
+                document.getElementById('dispWelcome').innerText = "Welcome to the Professional Workspace of Kishan Kumar Roy. Dedicated to precision in Mechanical Engineering, innovative design, and seamless technical solutions.";
+            }
+            if(localStorage.getItem('k_cv_url')) document.getElementById('cvLink').href = localStorage.getItem('k_cv_url');
+        };
+    </script>
+</body>
+</html>
