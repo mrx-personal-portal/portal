@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Final Fix)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master Updated)</title>
     <style>
         body {
             margin: 0;
@@ -13,7 +13,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Navbar: অরিজিনাল মাস্টার কোড --- */
+        /* --- Navbar: অরিজিনাল মাস্টার কোড এবং নতুন বাটন --- */
         .navbar {
             position: absolute;
             top: 15px;
@@ -44,6 +44,18 @@
             transition: all 0.3s ease;
         }
 
+        /* Download CV: অরেঞ্জ হাইলাইট */
+        .cv-btn {
+            background: #e67e22 !important;
+            border: 1px solid #e67e22 !important;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4) !important;
+        }
+
+        .navbar a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
         /* --- Header Section: Strictly 75% Height --- */
         .header-section {
             display: flex;
@@ -62,13 +74,13 @@
             position: relative;
         }
 
-        /* টেক্সট গ্রুপকে আরও নিচে নামানো হলো (250px Padding) */
+        /* তোমার প্রফেশনাল গ্যাপ (250px Padding) */
         .header-content {
             padding-top: 250px; 
             max-width: 850px;
             padding-left: 20px;
             padding-right: 20px;
-            box-sizing: border-box; /* Layout ঠিক রাখার জন্য */
+            box-sizing: border-box;
         }
 
         /* --- Animation Logic: তোমার সেই অরিজিনাল ১৪ সেকেন্ডের লুপ --- */
@@ -138,9 +150,9 @@
 
     <nav class="navbar">
         <a href="#">Home</a>
-        <a href="#">Personal Docs</a>
-        <a href="#">Official Docs</a>
+        <a href="#">Admin Dashboard</a>
         <a href="#">Contact</a>
+        <a href="#" class="cv-btn">Download CV</a>
     </nav>
 
     <header class="header-section">
@@ -154,7 +166,7 @@
     </header>
 
     <div class="content-area">
-        <p>Your K1 Master layout is now perfectly balanced.</p>
+        <p>Your K1 Master layout is fully updated and verified.</p>
     </div>
 
 </body>
