@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master with Footer)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Footer Fixed)</title>
     <style>
         body {
             margin: 0;
@@ -101,40 +101,41 @@
 
         .partition-line { width: 80%; height: 1px; background: linear-gradient(to right, transparent, #e67e22, transparent); margin: 40px auto; opacity: 0.5; }
 
-        /* --- Footer Section: তোমার নির্দেশিত ব্ল্যাক বক্স --- */
-        .footer {
-            background-color: #1a1a1a;
+        /* --- Footer Section: ডার্ক ব্ল্যাক বক্স --- */
+        footer {
+            background-color: #111111;
             color: #ffffff;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
+            width: 100%;
         }
 
-        .footer-content {
+        .footer-container {
             max-width: 850px;
             margin: 0 auto;
         }
 
-        .footer-heading {
-            font-size: 1.5em;
+        .footer-title {
+            font-size: 1.6em;
             color: #e67e22;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .contact-info {
+        .footer-info {
+            color: #aaa;
             line-height: 2;
-            font-size: 0.95em;
-            color: #bbbbbb;
+            font-size: 1em;
+            margin-bottom: 30px;
         }
 
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.8em;
-            color: #666666;
+        .footer-bottom {
             border-top: 1px solid #333;
             padding-top: 20px;
+            font-size: 0.85em;
+            color: #555;
         }
     </style>
 </head>
@@ -211,4 +212,21 @@
         </div>
     </section>
 
-    <div class="partition
+    <div class="partition-line"></div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-title">Contact Information</div>
+            <div class="footer-info">
+                <p>Email: contact@kishanroy.com</p>
+                <p>Location: Bhavnagar, Gujarat | Bongaon, West Bengal</p>
+                <p>Mechanical Specialist | BHS Installation & Commissioning</p>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Kishan Kumar Roy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
