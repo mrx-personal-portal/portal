@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan Kumar Roy - Portfolio</title>
     <style>
         body {
             margin: 0;
@@ -12,56 +13,39 @@
         }
 
         .header-section {
-            /* অনলাইন ছবির লিঙ্ক যা সবাই দেখতে পাবে */
-            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
+            /* --- Updated: Deeper Black Overlay added --- */
+            /* We increase the alpha (0.75) for a darker, deeper feel */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             
-            color: #ffffff;
-            padding: 80px 20px;
+            color: #ffffff; /* White text for contrast */
+            padding: 100px 20px; /* Increased padding for better visual spacing */
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .header-section h1 {
             margin: 0;
-            font-size: 3.2em;
-            letter-spacing: 1px;
+            font-size: 3.5em; /* Slightly larger name */
+            letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* Enhanced text shadow for maximum readability */
         }
 
         .header-section p.designation {
-            font-size: 1.4em;
-            color: #ecf0f1;
-            margin: 10px 0 35px 0;
+            font-size: 1.5em;
+            color: #f1f1f1; /* Bright white/light-grey for designation */
+            margin: 15px 0 0 0; /* Removed bottom margin */
             font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
         }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            font-size: 1.0em;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
-            border-radius: 5px;
-            backdrop-filter: blur(5px); /* ঝাপসা ইফেক্ট যা প্রফেশনাল দেখায় */
-        }
-
-        .contact-item span {
-            color: #ecf0f1;
-        }
+        
+        /* Contact info styling is removed as requested from this section */
     </style>
 </head>
 <body>
@@ -70,18 +54,7 @@
         <h1>Kishan Kumar Roy</h1>
         <p class="designation">Junior Engineer (Mechanical)</p>
         
-        <div class="contact-info">
-            <div class="contact-item">
-                <span>📍 Bongaon, North 24 Parganas, WB</span>
-            </div>
-            <div class="contact-item">
-                <span>📞 +91 9563790650</span>
-            </div>
-            <div class="contact-item">
-                <span>📧 kishannbhs2002@gmail.com</span>
-            </div>
-        </div>
-    </header>
+        </header>
 
 </body>
 </html>
