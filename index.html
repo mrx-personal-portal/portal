@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Original Base)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1)</title>
     <style>
         body {
             margin: 0;
@@ -13,7 +13,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Navbar: অরিজিনাল পজিশন --- */
+        /* --- Navigation Bar: Glassmorphism style at the top --- */
         .navbar {
             position: absolute;
             top: 15px;
@@ -44,25 +44,19 @@
             transition: all 0.3s ease;
         }
 
-        /* Download CV: অরেঞ্জ হাইলাইট বাটন */
-        .cv-btn {
-            background: #e67e22 !important;
-            border: 1px solid #e67e22 !important;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
-        }
-
         .navbar a:hover {
-            opacity: 0.9;
+            background: rgba(230, 126, 34, 0.8);
+            border-color: #e67e22;
             transform: translateY(-2px);
         }
 
-        /* --- Header Section: একদম সেই অরিজিনাল ৭৫% হাইট --- */
+        /* --- Header Section (75% Height) --- */
         .header-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 75vh; /* সকালের অরিজিনাল কোড অনুযায়ী ৭৫% */
+            height: 75vh; 
             width: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
@@ -80,7 +74,7 @@
             padding: 0 20px;
         }
 
-        /* --- Animation Logic: অরিজিনাল ১৪ সেকেন্ডের লুপ --- */
+        /* --- Animation Logic (14s Loop) --- */
         .name-animated {
             font-size: 3.5em;
             letter-spacing: 3px;
@@ -117,29 +111,38 @@
 
         @keyframes kishanSequence {
             0% { opacity: 0; transform: translateX(150%); } 
-            15%, 75% { opacity: 1; transform: translateX(0); }   
-            85%, 100% { opacity: 0; transform: translateY(150px); }
+            15% { opacity: 1; transform: translateX(0); }   
+            75% { opacity: 1; transform: translateX(0); }   
+            85% { opacity: 0; transform: translateY(150px); } 
+            100% { opacity: 0; transform: translateY(150px); }
         }
 
         @keyframes juniorSequence {
             0% { opacity: 0; transform: translateX(-150%); } 
-            20%, 75% { opacity: 1; transform: translateX(0); }   
-            85%, 100% { opacity: 0; transform: translateY(150px); }
+            20% { opacity: 1; transform: translateX(0); }   
+            75% { opacity: 1; transform: translateX(0); }   
+            85% { opacity: 0; transform: translateY(150px); } 
+            100% { opacity: 0; transform: translateY(150px); }
         }
 
         @keyframes msgSequence {
             0%, 25% { opacity: 0; transform: scale(0.9); }
-            35%, 75% { opacity: 1; transform: scale(1); }   
-            85%, 100% { opacity: 0; transform: translateY(100px); }
+            35% { opacity: 1; transform: scale(1); }   
+            75% { opacity: 1; transform: scale(1); }   
+            85% { opacity: 0; transform: translateY(100px); } 
+            100% { opacity: 0; }
         }
 
-        /* Modal Settings */
+        /* --- Login Modal --- */
         .modal {
             display: none; 
             position: fixed;
             z-index: 2000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.85);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
         }
 
         .modal-content {
@@ -149,10 +152,97 @@
             border-radius: 12px;
             width: 280px;
             text-align: center;
+            position: relative;
+        }
+
+        .modal-content input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
         }
 
         .content-area {
-            height: 25vh; /* নিচের সাদা অংশ */
+            height: 25vh;
             background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
         }
-    </
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="javascript:void(0)" onclick="showLogin('Personal Documents')">Personal Docs</a>
+        <a href="javascript:void(0)" onclick="showLogin('Official Documents')">Official Docs</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <header class="header-section">
+        <div class="header-content">
+            <span class="name-animated">Kishan Kumar Roy</span>
+            <span class="title-animated">Junior Engineer (Mechanical)</span>
+            <p class="welcome-msg">
+                Welcome to the Professional Workspace of Kishan Kumar Roy. Dedicated to precision in Mechanical Engineering, innovative design, and seamless technical solutions. Explore the journey of building efficiency through engineering excellence.
+            </p>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle" style="color:#333; margin-bottom: 20px;">Login</h3>
+            <input type="text" placeholder="User ID">
+            <input type="password" placeholder="Password">
+            <button onclick="alert('Access Restricted: Validation Required')">Login</button>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <p>Interface is ready. Scroll to explore more.</p>
+    </div>
+
+    <script>
+        function showLogin(title) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('loginModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
