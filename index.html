@@ -13,28 +13,46 @@
             overflow-x: hidden;
         }
 
-        /* --- Navigation Bar --- */
+        /* --- Updated Navigation: Transparent & Directly on Image --- */
         .navbar {
-            position: fixed;
+            position: absolute; /* ছবির ওপরে থাকার জন্য */
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
+            background: transparent; /* কালো ব্যাকগ্রাউন্ড সরিয়ে দেওয়া হলো */
             display: flex;
             justify-content: center;
-            padding: 15px 0;
+            padding: 30px 0;
             z-index: 1000;
-            border-bottom: 2px solid #e67e22;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
+            margin: 0 25px;
+            font-weight: 600;
             font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: 0.3s;
             cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* লেখা ফুটানোর জন্য শ্যাডো */
+            position: relative;
+        }
+
+        /* মাউস নিলে নিচে ছোট এনিমেশন আন্ডারলাইন */
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #e67e22;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
         }
 
         .navbar a:hover {
@@ -57,9 +75,10 @@
             color: #ffffff;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
         }
 
-        /* --- Animations --- */
+        /* --- Animation Logic (Your Requested Transitions) --- */
         .name-animated {
             font-size: 3.8em;
             letter-spacing: 3px;
@@ -112,7 +131,7 @@
 
         .modal-content {
             background-color: #fff;
-            margin: 15% auto;
+            margin: 10% auto;
             padding: 30px;
             border-radius: 10px;
             width: 300px;
@@ -121,7 +140,7 @@
         }
 
         .modal-content input {
-            width: 80%;
+            width: 85%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -136,12 +155,14 @@
             cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
+            width: 100%;
         }
 
         .close-btn {
             float: right;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         .content-area {
@@ -173,15 +194,16 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3 id="modalTitle">Login</h3>
+            <h3 id="modalTitle" style="color: #333;">Login</h3>
+            <p style="font-size: 0.9em; color: #666;">Access Restricted</p>
             <input type="text" placeholder="User ID">
             <input type="password" placeholder="Password">
-            <button onclick="alert('Access Denied: Implementation needed')">Login</button>
+            <button onclick="alert('Verification logic needed')">Access Files</button>
         </div>
     </div>
 
     <div class="content-area">
-        <p>Scroll down for more information.</p>
+        <p>Your journey and experience will continue below.</p>
     </div>
 
     <script>
