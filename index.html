@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Final)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master Final with Smooth Scroll)</title>
     <style>
+        /* স্মুথ স্ক্রলিং এনাবেল করার জন্য এই লাইনটি জরুরি */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -86,7 +91,7 @@
         @keyframes juniorSequence { 0% { opacity: 0; transform: translateX(-150%); } 20%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes msgEnter { 0% { opacity: 0; transform: translateY(50px); } 25%, 75% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
 
-        /* --- Content Styling --- */
+        /* --- Content Section Styling --- */
         .section-container { padding: 60px 20px 20px 20px; max-width: 850px; margin: 0 auto; text-align: left; }
         .section-heading { font-size: 2em; color: #2c3e50; position: relative; display: inline-block; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; border-radius: 2px; }
@@ -130,7 +135,6 @@
             margin-bottom: 30px;
         }
 
-        /* লিঙ্কের স্টাইল */
         .footer-info a {
             color: #e67e22;
             text-decoration: none;
@@ -155,7 +159,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">Admin Dashboard</a>
-            <a href="#">Contact</a>
+            <a href="#contact-info">Contact</a>
             <a href="#" class="cv-btn">Download CV</a>
         </div>
         <div class="login-container">
@@ -187,6 +191,11 @@
             <div class="item-subtitle">Gannon Dunkerley & Co., Ltd.</div>
             <div class="item-date">Feb 2026 – Present</div>
         </div>
+        <div class="item-row">
+            <div class="item-title">Fitter Mechanic – BHS Installation</div>
+            <div class="item-subtitle">Gannon Dunkerley & Co., Ltd.</div>
+            <div class="item-date">Oct 2022 – Jan 2026</div>
+        </div>
     </section>
 
     <div class="partition-line"></div>
@@ -200,7 +209,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact-info">
         <div class="footer-container">
             <div class="footer-title">Contact Information</div>
             <div class="footer-info">
