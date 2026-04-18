@@ -10,7 +10,7 @@
             padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #f4f7f6;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* Header Section (75% Height) */
@@ -30,25 +30,21 @@
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             border-bottom: 5px solid #e67e22;
-            position: relative;
         }
 
-        /* --- Animation Logic --- */
+        /* --- Updated Animation Logic --- */
         
-        /* Kishan Kumar Roy Animation */
         .name-animated {
             font-size: 3.8em;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 800;
             text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
-            position: relative;
             display: block;
-            /* Animation: Right to Left -> Wait -> Top to Bottom -> Loop */
-            animation: kishanSequence 8s ease-in-out infinite;
+            /* মোট ১২ সেকেন্ডের লুপ যাতে সময় নিয়ে সব ঘটে */
+            animation: kishanSequence 12s ease-in-out infinite;
         }
 
-        /* Junior Engineer Animation */
         .title-animated {
             font-size: 1.6em;
             color: #f1f1f1;
@@ -57,30 +53,26 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-            position: relative;
             display: block;
-            /* Animation: Left to Right -> Wait -> Bottom to Top -> Loop */
-            animation: juniorSequence 8s ease-in-out infinite;
+            animation: juniorSequence 12s ease-in-out infinite;
         }
 
-        /* Keyframes for Kishan Kumar Roy */
+        /* Kishan Kumar Roy: Right to Center -> Hold -> Drop Bottom */
         @keyframes kishanSequence {
-            0% { opacity: 0; transform: translateX(100%); } /* Start Right */
-            15% { opacity: 1; transform: translateX(0); }   /* Move to Center */
-            45% { opacity: 1; transform: translateX(0); }   /* Stay */
-            60% { opacity: 0; transform: translateY(100px); } /* Drop Down */
-            80% { opacity: 0; transform: translateX(100%); } /* Reset to Right */
-            100% { opacity: 0; transform: translateX(100%); }
+            0% { opacity: 0; transform: translateX(150%); } 
+            15% { opacity: 1; transform: translateX(0); }   /* ২ সেকেন্ডের মধ্যে সেন্টারে আসবে */
+            65% { opacity: 1; transform: translateX(0); }   /* অনেকক্ষণ হোল্ড করবে */
+            80% { opacity: 0; transform: translateY(150px); } /* উপর থেকে নিচে ড্রপ */
+            100% { opacity: 0; transform: translateY(150px); }
         }
 
-        /* Keyframes for Junior Engineer */
+        /* Junior Engineer: Left to Center -> Hold -> Drop Bottom */
         @keyframes juniorSequence {
-            0% { opacity: 0; transform: translateX(-100%); } /* Start Left */
-            20% { opacity: 1; transform: translateX(0); }    /* Move to Center (Slight delay) */
-            50% { opacity: 1; transform: translateX(0); }    /* Stay */
-            65% { opacity: 0; transform: translateY(-100px); } /* Slide Up */
-            85% { opacity: 0; transform: translateX(-100%); }  /* Reset to Left */
-            100% { opacity: 0; transform: translateX(-100%); }
+            0% { opacity: 0; transform: translateX(-150%); } 
+            20% { opacity: 1; transform: translateX(0); }   /* নামের একটু পরে আসবে */
+            65% { opacity: 1; transform: translateX(0); }   /* অনেকক্ষণ হোল্ড করবে */
+            80% { opacity: 0; transform: translateY(150px); } /* এটাও উপর থেকে নিচে ড্রপ */
+            100% { opacity: 0; transform: translateY(150px); }
         }
 
         .content-area {
@@ -103,7 +95,7 @@
     </header>
 
     <div class="content-area">
-        <p>Next steps: Professional Summary & Experience will appear here.</p>
+        <p>Next steps: Navigation & Professional Info will be added here.</p>
     </div>
 
 </body>
