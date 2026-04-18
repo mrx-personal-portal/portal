@@ -13,7 +13,7 @@
             overflow-x: hidden;
         }
 
-        /* Header Section (75% Height) */
+        /* Header Section (75% Height remains same) */
         .header-section {
             display: flex;
             flex-direction: column;
@@ -21,9 +21,10 @@
             align-items: center;
             height: 75vh; 
             width: 100%;
-            /* গুগল/অনলাইন সোর্স থেকে নেওয়া ল্যাপটপ ও ড্রয়িং এর ছবি */
+            /* --- শুধুমাত্র এই ছবির ইউআরএল আপডেট করা হয়েছে --- */
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
-                              url('https://images.unsplash.com/photo-1503387762-11a0fcfbd307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
+                              url('https://images.unsplash.com/photo-1503387762-11a0fcfbd307?q=80&w=2070&auto=format&fit=crop'); 
+            
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -33,8 +34,7 @@
             border-bottom: 5px solid #e67e22;
         }
 
-        /* --- Your Requested Animation Logic (Slower Speed & Bottom Drop) --- */
-        
+        /* --- তোমার আগের সমস্ত অ্যানিমেশন লজিক অপরিবর্তিত রাখা হয়েছে --- */
         .name-animated {
             font-size: 3.8em;
             letter-spacing: 3px;
@@ -59,9 +59,9 @@
 
         @keyframes kishanSequence {
             0% { opacity: 0; transform: translateX(150%); } 
-            15% { opacity: 1; transform: translateX(0); }   
-            65% { opacity: 1; transform: translateX(0); }   
-            80% { opacity: 0; transform: translateY(150px); } 
+            15% { opacity: 1; transform: translateX(0); }   /* ২ সেকেন্ডে সেন্টারে আসা */
+            65% { opacity: 1; transform: translateX(0); }   /* অনেকক্ষণ হোল্ড */
+            80% { opacity: 0; transform: translateY(150px); } /* উপর থেকে নিচে ড্রপ */
             100% { opacity: 0; transform: translateY(150px); }
         }
 
@@ -93,7 +93,7 @@
     </header>
 
     <div class="content-area">
-        <p>Next steps: Navigation & Professional Info.</p>
+        <p>Your professional details will appear here next.</p>
     </div>
 
 </body>
