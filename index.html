@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Login Update)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master Final)</title>
     <style>
         body {
             margin: 0;
@@ -13,18 +13,18 @@
             overflow-x: hidden;
         }
 
-        /* --- Navbar: অরিজিনাল মাস্টার কোড --- */
+        /* --- Updated Navbar for Error-Free Layout --- */
         .navbar {
             position: absolute;
             top: 15px;
-            width: 96%; /* দুই পাশে সামান্য জায়গা রাখার জন্য */
+            width: 96%;
             left: 2%;
             background: transparent;
             display: flex;
-            justify-content: center; /* মাঝখানে মেইন মেনু রাখার জন্য */
+            justify-content: center; /* মাঝখানে মেইন মেনু */
             align-items: center;
             padding: 10px 0;
-            z-index: 1000;
+            z-index: 2000; /* নিশ্চিতভাবে সবকিছুর উপরে থাকবে */
         }
 
         .nav-links {
@@ -43,22 +43,24 @@
             cursor: pointer;
             background: rgba(255, 255, 255, 0.1); 
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 10px 18px;
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
 
-        /* Download CV: অরেঞ্জ হাইলাইট */
+        /* CV Button: অরেঞ্জ হাইলাইট */
         .cv-btn {
             background: #e67e22 !important;
             border: 1px solid #e67e22 !important;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
         }
 
-        /* Login Button: টপ মোস্ট রাইট কর্নার, ব্লু ব্যাকগ্রাউন্ড, হোয়াইট টেক্সট */
+        /* LOGIN: টপ মোস্ট রাইট কর্নার ফিক্সড */
         .login-container {
             position: absolute;
-            right: 0;
+            right: 10px; /* একদম কোণায় */
         }
 
         .login-btn {
@@ -74,7 +76,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- Header Section: Strictly 75% Height --- */
+        /* --- Header Section: Strictly 75% Height (Unchanged) --- */
         .header-section {
             display: flex;
             flex-direction: column;
@@ -91,15 +93,16 @@
             position: relative;
         }
 
+        /* তোমার প্রফেশনাল গ্যাপ (250px Padding) */
         .header-content {
-            padding-top: 250px; /* তোমার প্রফেশনাল গ্যাপ */
+            padding-top: 250px; 
             max-width: 850px;
             padding-left: 20px;
             padding-right: 20px;
             box-sizing: border-box;
         }
 
-        /* --- Animation Logic: অরিজিনাল ১৪ সেকেন্ডের লুপ --- */
+        /* --- Animation Logic: সেই অরিজিনাল ১৪ সেকেন্ডের লুপ --- */
         .name-animated {
             font-size: 3.5em;
             letter-spacing: 3px;
@@ -126,4 +129,54 @@
 
         @keyframes kishanSequence {
             0% { opacity: 0; transform: translateX(150%); } 
-            15%, 75% { opacity:
+            15%, 75% { opacity: 1; transform: translateX(0); }   
+            85%, 100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        @keyframes juniorSequence {
+            0% { opacity: 0; transform: translateX(-150%); } 
+            20%, 75% { opacity: 1; transform: translateX(0); }   
+            85%, 100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        @keyframes msgSequence {
+            0%, 25% { opacity: 0; }
+            35%, 75% { opacity: 1; }   
+            85%, 100% { opacity: 0; transform: translateY(100px); }
+        }
+
+        .content-area {
+            height: 25vh;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Admin Dashboard</a>
+            <a href="#">Contact</a>
+            <a href="#" class="cv-btn">Download CV</a>
+        </div>
+        
+        <div class="login-container">
+            <a href="#" class="login-btn">LOGIN</a>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <div class="header-content">
+            <span class="name-animated">Kishan Kumar Roy</span>
+            <span class="title-animated">Junior Engineer (Mechanical)</span>
+            <p class="welcome-msg">
+                Welcome to the Professional Workspace of Kishan Kumar Roy. Dedicated to precision in Mechanical Engineering, innovative design, and seamless technical solutions.
+            </p>
+        </div>
+    </header>
+
+    <div class="content-area"></div>
+
+</body>
+</html>
