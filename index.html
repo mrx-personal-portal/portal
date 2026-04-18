@@ -3,157 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio</title>
     <style>
-        /* Base Styles and Background Setup */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                        url('https://img.freepik.com/free-photo/engineering-drawing-background_23-2148160455.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: rgba(44, 62, 80, 0.9);
-            padding: 15px 0;
+        .header-section {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 60px 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        /* Container */
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border-radius: 8px;
-        }
-
-        /* Header Section */
-        header {
-            text-align: center;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
+        .header-section h1 {
             margin: 0;
-            color: #2c3e50;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        header p {
-            margin: 5px 0;
-            color: #7f8c8d;
-            font-size: 1.1em;
+        .header-section p.designation {
+            font-size: 1.2em;
+            color: #bdc3c7;
+            margin: 10px 0 25px 0;
+            font-weight: 300;
         }
 
-        /* Section Headings */
-        h2 {
-            color: #e67e22;
-            border-left: 5px solid #2c3e50;
-            padding-left: 10px;
-            margin-top: 30px;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
         }
 
-        .content-block {
-            margin-bottom: 20px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
         }
 
-        .job-title {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .date {
-            font-style: italic;
-            color: #7f8c8d;
-            float: right;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* Responsive Mobile View */
-        @media (max-width: 600px) {
-            .date { float: none; display: block; margin-bottom: 5px; }
-            .container { padding: 20px; margin: 10px; }
+        .contact-item span {
+            color: #ecf0f1;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#documents">Documents</a>
-    </nav>
-
-    <div class="container">
-        <header id="home">
-            <h1>Kishan Kumar Roy</h1>
-            <p>Junior Engineer (Mechanical)</p>
-            <p>West Bengal, India | Email: kishan@email.com | Phone: +91-XXXXXXXXXX</p>
-        </header>
-
-        <section>
-            <h2>Professional Summary</h2>
-            <p>A dedicated Mechanical Engineering Diploma holder with extensive experience in the installation, commissioning, and maintenance of Airport Baggage Conveyor Systems (BCS). Proficient in technical troubleshooting and project management.</p>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            <div class="content-block">
-                <span class="date">Present</span>
-                <p class="job-title">Junior Engineer (Mech.) - Gannon Dunkerley & Co. Ltd.</p>
-                <ul>
-                    <li>Maintenance and servicing of Airport Baggage Conveyor Systems.</li>
-                    <li>VFD parameter setup and mechanical roller testing.</li>
-                    <li>Preparation of technical service reports and inventory management.</li>
-                </ul>
+    <header class="header-section">
+        <h1>Kishan Kumar Roy</h1>
+        <p class="designation">Junior Engineer (Mechanical)</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📍 Bongaon, North 24 Parganas, WB</span>
             </div>
-        </section>
-
-        <section>
-            <h2>Qualifications</h2>
-            <div class="content-block">
-                <p><strong>Diploma in Mechanical Engineering</strong></p>
-                <p>West Bengal State Council of Technical & Vocational Education and Skill Development</p>
+            <div class="contact-item">
+                <span>📞 +91 9563790650</span>
             </div>
-        </section>
-
-        <section id="documents">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>BCS Installation & Maintenance</li>
-                <li>Interpretation of Mechanical Drawings</li>
-                <li>VFD and Motor Control Systems</li>
-                <li>MS Office & Project Reporting</li>
-            </ul>
-        </section>
-    </div>
+            <div class="contact-item">
+                <span>📧 kishannbhs2002@gmail.com</span>
+            </div>
+        </div>
+    </header>
 
 </body>
 </html>
-
