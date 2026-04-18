@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Final)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Master Verified Final)</title>
     <style>
-        /* স্মুথ স্ক্রলিং */
+        /* স্মুথ স্ক্রলিং লজিক */
         html { scroll-behavior: smooth; }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -43,6 +43,7 @@
             cursor: pointer;
             background: rgba(255, 255, 255, 0.1); 
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 10px 18px;
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -68,7 +69,7 @@
             border-bottom: 3px solid #e67e22; 
         }
 
-        /* ২৫০ পিক্সেল গ্যাপ - মাস্টার রুল */
+        /* ২৫০ পিক্সেল গ্যাপ রুল */
         .header-content {
             padding-top: 250px; 
             max-width: 850px;
@@ -89,7 +90,7 @@
         @keyframes juniorSequence { 0% { opacity: 0; transform: translateX(-150%); } 20%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes msgEnter { 0% { opacity: 0; transform: translateY(50px); } 25%, 75% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
 
-        /* --- Content Section Styling --- */
+        /* --- Content Styling --- */
         .section-container { padding: 60px 20px 20px 20px; max-width: 850px; margin: 0 auto; text-align: left; }
         .section-heading { font-size: 2em; color: #2c3e50; position: relative; display: inline-block; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; border-radius: 2px; }
@@ -103,7 +104,7 @@
 
         .partition-line { width: 80%; height: 1px; background: linear-gradient(to right, transparent, #e67e22, transparent); margin: 40px auto; opacity: 0.5; }
 
-        /* --- Footer Section --- */
+        /* --- Footer Section: ডার্ক ব্ল্যাক বক্স --- */
         footer {
             background-color: #111111;
             color: #ffffff;
@@ -117,7 +118,6 @@
         .footer-title { font-size: 1.6em; color: #e67e22; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
         .footer-info { color: #aaa; line-height: 1.8; font-size: 1em; margin-bottom: 30px; }
         .footer-info a { color: #e67e22; text-decoration: none; transition: opacity 0.3s; }
-        .footer-info a:hover { opacity: 0.8; }
         .footer-bottom { border-top: 1px solid #333; padding-top: 20px; font-size: 0.85em; color: #555; }
     </style>
 </head>
@@ -147,7 +147,6 @@
         <h2 class="section-heading">About Me</h2>
         <div class="about-content">
             <p>I am a Mechanical Engineer by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the complex world of installation, commissioning, and maintenance of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>. My professional core lies in troubleshooting mechanical intricacies and ensuring seamless system operations with precision.</p>
-            <p>Beyond the gears and blueprints, I find my solace in the tranquility of nature and the grandeur of the mountains. This connection with the natural world teaches me patience and resilience—qualities that I directly apply to my engineering projects.</p>
         </div>
     </section>
 
