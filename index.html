@@ -5,56 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kishan Kumar Roy - Portfolio</title>
     <style>
-        body {
+        /* CSS Reset for a clean slate */
+        html, body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            height: 100%; /* Ensure body can take up full height */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f7f6;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
         }
 
+        /* --- Updated: Full-Screen Header --- */
         .header-section {
-            /* --- Updated: Transparent Black Overlay --- */
-            /* এখানে ঘনত্ব কমিয়ে 0.45 করা হয়েছে যাতে পেছনের ছবিটা একদম পরিষ্কার বোঝা যায় */
+            display: flex; /* Flexbox for vertical centering of text */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            /* --- Breathing Room (Breath/Height) is now Full Screen (100vh) --- */
+            height: 100vh; 
+            width: 100%;
+            
+            /* Background remains mostly the same but covers full viewport */
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed; /* Parallax effect for a premium feel */
             
             color: #ffffff;
-            padding: 120px 20px; /* স্পেসিং বাড়ানো হয়েছে যাতে লুকটা আরও লাক্সারি হয় */
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border-bottom: 4px solid #e67e22; /* নিচে একটা মেকানিক্যাল অরেঞ্জ বর্ডার দেওয়া হলো */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-bottom: 5px solid #e67e22; /* Mechanical orange accent */
         }
 
+        /* Container for animated content */
+        .header-content {
+            opacity: 0; /* Initially hidden for animation */
+            transform: translateY(30px); /* Slightly down initially */
+            animation: slideInFade 1.2s ease-out forwards; /* Run animation once */
+        }
+
+        /* Keyframes for the Entrance Animation (Slide In & Fade In) */
+        @keyframes slideInFade {
+            to {
+                opacity: 1; /* Fade in */
+                transform: translateY(0); /* Move back to original position */
+            }
+        }
+
+        /* Text Styling (Name & Designation) */
         .header-section h1 {
             margin: 0;
-            font-size: 3.8em;
-            letter-spacing: 3px;
+            font-size: 4.5em; /* Large, bold name */
+            letter-spacing: 4px;
             text-transform: uppercase;
             font-weight: 800;
-            /* লেখার পেছনে হালকা শ্যাডো যাতে হালকা ব্যাকগ্রাউন্ডেও পড়া যায় */
-            text-shadow: 3px 3px 10px rgba(0,0,0,0.8); 
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.8); 
         }
 
         .header-section p.designation {
-            font-size: 1.6em;
-            color: #ffffff;
-            margin: 10px 0 0 0;
+            font-size: 1.8em;
+            color: #f1f1f1;
+            margin: 15px 0 0 0;
             font-weight: 400;
             letter-spacing: 2px;
-            text-transform: capitalize;
+            text-transform: uppercase;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
+        
+        /* Ensure all text uses full animation container */
+        .header-section .animated-item {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
 
     <header class="header-section">
-        <h1>Kishan Kumar Roy</h1>
-        <p class="designation">Junior Engineer (Mechanical)</p>
+        <div class="header-content">
+            <h1 class="animated-item">Kishan Kumar Roy</h1>
+            <p class="designation animated-item">Junior Engineer (Mechanical)</p>
+        </div>
     </header>
 
 </body>
