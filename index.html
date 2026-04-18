@@ -52,7 +52,7 @@
         .login-submit { background: #e67e22; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: 700; }
         .cancel-btn { background: #95a5a6; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; }
 
-        /* --- Header Section (75% Height) --- */
+        /* --- Header Section (Strictly 75% Height) --- */
         .header-section {
             display: flex; flex-direction: column; justify-content: flex-start; 
             align-items: center; height: 75vh; width: 100%;
@@ -62,10 +62,15 @@
             color: #ffffff; text-align: center; position: relative;
             border-bottom: 3px solid #e67e22; 
         }
-        .header-content { padding-top: 250px; max-width: 850px; }
+
+        /* ২৫০ পিক্সেল প্যাডিং রুল */
+        .header-content { padding-top: 250px; max-width: 850px; box-sizing: border-box; display: flex; flex-direction: column; gap: 2px; }
+
+        /* --- Animation Logic: ১৪ সেকেন্ডের লুপ --- */
         .name-animated { font-size: 3.5em; letter-spacing: 3px; text-transform: uppercase; font-weight: 800; animation: kishanSequence 14s ease-in-out infinite; display: block; }
         .title-animated { font-size: 1.5em; color: #f1f1f1; font-weight: 400; animation: juniorSequence 14s ease-in-out infinite; display: block; }
         .welcome-msg { font-size: 1.05em; color: #e0e0e0; font-style: italic; opacity: 0; animation: msgEnter 14s ease-in-out infinite; display: block; }
+
         @keyframes kishanSequence { 0% { opacity: 0; transform: translateX(150%); } 15%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes juniorSequence { 0% { opacity: 0; transform: translateX(-150%); } 20%, 75% { opacity: 1; transform: translateX(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
         @keyframes msgEnter { 0% { opacity: 0; transform: translateY(50px); } 25%, 75% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(150px); } }
@@ -73,11 +78,13 @@
         /* --- Content Styling --- */
         .section-container { padding: 60px 20px; max-width: 850px; margin: 0 auto; text-align: left; }
         .section-heading { font-size: 2em; color: #2c3e50; position: relative; display: inline-block; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; }
-        .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; }
-        .item-row { margin-bottom: 25px; border-left: 3px solid #e67e22; padding-left: 20px; }
-        .item-title { font-size: 1.2em; font-weight: 700; }
-        .item-subtitle { color: #e67e22; font-weight: 600; margin: 3px 0; }
+        .section-heading::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 60px; height: 4px; background-color: #e67e22; border-radius: 2px; }
+        .about-content { font-size: 1.15em; line-height: 1.8; color: #444; text-align: justify; }
         .orange-highlight { color: #e67e22; font-weight: 700; }
+        .item-row { margin-bottom: 25px; border-left: 3px solid #e67e22; padding-left: 20px; }
+        .item-title { font-size: 1.2em; font-weight: 700; color: #333; }
+        .item-subtitle { color: #e67e22; font-weight: 600; margin: 3px 0; }
+        .item-date { font-size: 0.9em; color: #777; font-style: italic; }
         .partition-line { width: 80%; height: 1px; background: linear-gradient(to right, transparent, #e67e22, transparent); margin: 40px auto; opacity: 0.5; }
 
         /* --- Footer --- */
@@ -119,7 +126,7 @@
     <section class="section-container">
         <h2 class="section-heading">About Me</h2>
         <div class="about-content">
-            <p>I am a Mechanical Engineer by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the world of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>. My professional core lies in troubleshooting mechanical intricacies and ensuring seamless system operations.</p>
+            <p>I am a Mechanical Engineer by profession and a nature enthusiast by heart. For over the past <span class="orange-highlight">3 years</span>, I have dedicated myself to the world of <span class="orange-highlight">Baggage Handling Systems (BHS)</span>.</p>
         </div>
     </section>
 
@@ -184,7 +191,6 @@
                 <p>Contact: +91 9563790650</p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/kishan-kumar-roy-380112261" target="_blank">View Profile</a></p>
                 <p>Address: Bongaon, North 24 Parganas, West Bengal - 743235</p>
-                <p style="color: #e67e22; font-weight: 600; margin-top: 10px;">Mechanical Specialist | BHS Installation & Commissioning</p>
             </div>
             <div class="footer-bottom">
                 &copy; 2026 Kishan Kumar Roy. All Rights Reserved.
