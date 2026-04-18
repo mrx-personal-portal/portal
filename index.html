@@ -13,7 +13,7 @@
             overflow-x: hidden;
         }
 
-        /* Header Section (75% Height remains same) */
+        /* Header Section (75% Height) */
         .header-section {
             display: flex;
             flex-direction: column;
@@ -21,9 +21,9 @@
             align-items: center;
             height: 75vh; 
             width: 100%;
-            /* Updated Image: Includes Laptop and Engineering elements */
+            /* গুগল/অনলাইন সোর্স থেকে নেওয়া ল্যাপটপ ও ড্রয়িং এর ছবি */
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
-                              url('https://depositphotos.com/photo/mechanical-engineering-parts-tools-laptop-drawing-top-184595498.html'); 
+                              url('https://images.unsplash.com/photo-1503387762-11a0fcfbd307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -59,17 +59,17 @@
 
         @keyframes kishanSequence {
             0% { opacity: 0; transform: translateX(150%); } 
-            15% { opacity: 1; transform: translateX(0); }   /* Slide to Center */
-            65% { opacity: 1; transform: translateX(0); }   /* Long Hold */
-            80% { opacity: 0; transform: translateY(150px); } /* Drop Bottom */
+            15% { opacity: 1; transform: translateX(0); }   
+            65% { opacity: 1; transform: translateX(0); }   
+            80% { opacity: 0; transform: translateY(150px); } 
             100% { opacity: 0; transform: translateY(150px); }
         }
 
         @keyframes juniorSequence {
             0% { opacity: 0; transform: translateX(-150%); } 
-            20% { opacity: 1; transform: translateX(0); }   /* Slide to Center */
-            65% { opacity: 1; transform: translateX(0); }   /* Long Hold */
-            80% { opacity: 0; transform: translateY(150px); } /* Drop Bottom */
+            20% { opacity: 1; transform: translateX(0); }   
+            65% { opacity: 1; transform: translateX(0); }   
+            80% { opacity: 0; transform: translateY(150px); } 
             100% { opacity: 0; transform: translateY(150px); }
         }
 
@@ -93,7 +93,7 @@
     </header>
 
     <div class="content-area">
-        <p>Your professional details will be added here next.</p>
+        <p>Next steps: Navigation & Professional Info.</p>
     </div>
 
 </body>
