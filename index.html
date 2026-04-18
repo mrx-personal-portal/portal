@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Master Border Update)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Final with About Me)</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f4f7f6;
+            background-color: #ffffff;
             overflow-x: hidden;
         }
 
@@ -48,9 +48,8 @@
         }
 
         .cv-btn { background: #e67e22 !important; border: 1px solid #e67e22 !important; box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); }
-        
         .login-container { position: absolute; right: 10px; }
-        .login-btn { background: #007bff !important; color: white !important; border: 1px solid #007bff !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); }
+        .login-btn { background: #007bff !important; color: white !important; border: 1px solid #007bff !important; font-weight: 700 !important; }
 
         /* --- Header Section: Strictly 75% Height --- */
         .header-section {
@@ -64,11 +63,9 @@
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover; background-position: center;
             color: #ffffff; text-align: center; position: relative;
-            /* ছবির একদম নিচে বর্ডার প্লেস করা হয়েছে */
             border-bottom: 3px solid #e67e22; 
         }
 
-        /* টেক্সট গ্রুপ পজিশনিং (250px Top Padding) */
         .header-content {
             padding-top: 250px; 
             max-width: 850px;
@@ -80,7 +77,7 @@
             gap: 2px;
         }
 
-        /* --- Animation Logic: ১৪ সেকেন্ডের লুপ --- */
+        /* --- Animation Logic --- */
         .name-animated {
             font-size: 3.5em;
             letter-spacing: 3px;
@@ -97,7 +94,6 @@
             font-weight: 400;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
             display: block;
             animation: juniorSequence 14s ease-in-out infinite;
         }
@@ -107,8 +103,6 @@
             color: #e0e0e0;
             font-style: italic;
             line-height: 1.4;
-            font-weight: 300;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
             margin-top: 8px;
             opacity: 0;
             display: block;
@@ -133,14 +127,60 @@
             85%, 100% { opacity: 0; transform: translateY(150px); }
         }
 
-        .content-area { 
-            height: 25vh; 
-            background: white; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 500;
-            color: #333;
+        /* --- About Me Section --- */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .about-heading {
+            font-size: 2em;
+            color: #2c3e50;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .about-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #e67e22;
+        }
+
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about-list li::before {
+            content: '•';
+            color: #e67e22;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
         }
     </style>
 </head>
@@ -168,9 +208,17 @@
         </div>
     </header>
 
-    <div class="content-area">
-        <p>Explore my projects and technical expertise below.</p>
-    </div>
+    <section class="about-section">
+        <h2 class="about-heading">About Me</h2>
+        <div class="about-content">
+            <p>আমি একজন পেশাদার মেকানিক্যাল ইঞ্জিনিয়ার যার ব্যাগেজ কনভেয়র সিস্টেমের (BCS) ইনস্টলেশন এবং মেইনটেন্যান্স-এ ৩ বছরেরও বেশি অভিজ্ঞতা রয়েছে।</p>
+            <ul class="about-list">
+                <li>Baggage Conveyor System (BCS) বিশেষজ্ঞ।</li>
+                <li>মেকানিক্যাল ডিজাইন এবং ইন্ডাস্ট্রিয়াল অটোমেশন নিয়ে কাজ করতে আগ্রহী।</li>
+                <li>পেশাদারিত্ব এবং নিখুঁত কাজের প্রতি দায়বদ্ধ।</li>
+            </ul>
+        </div>
+    </section>
 
 </body>
 </html>
