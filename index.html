@@ -13,7 +13,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Navigation Bar: Glassmorphism style --- */
+        /* --- Navigation Bar --- */
         .navbar {
             position: absolute;
             top: 15px;
@@ -21,7 +21,7 @@
             background: transparent;
             display: flex;
             justify-content: center;
-            align-items: center; /* Vertical alignment */
+            align-items: center; 
             padding: 10px 0;
             z-index: 1000;
         }
@@ -45,11 +45,12 @@
             transition: all 0.3s ease;
         }
 
-        /* --- Special Highlight for Download CV Button --- */
+        /* --- Updated: High Contrast CV Button --- */
         .navbar a.cv-btn {
-            background: rgba(230, 126, 34, 0.2); /* Light orange tint */
+            background: #e67e22; /* সলিড কালার যা সরাসরি চোখে পড়বে */
             border: 1px solid #e67e22;
-            color: #e67e22;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
         }
 
         .navbar a:hover {
@@ -57,6 +58,12 @@
             border-color: #e67e22;
             color: white;
             transform: translateY(-2px);
+        }
+
+        /* মাউস নিলে CV বাটন একটু উজ্জ্বল হবে */
+        .navbar a.cv-btn:hover {
+            background: #cf6d17;
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
         }
 
         /* --- Header Section (75% Height) --- */
@@ -83,7 +90,7 @@
             padding: 0 20px;
         }
 
-        /* --- Animation Logic (14s Loop with extended hold) --- */
+        /* --- Animation Logic (14s Loop) --- */
         .name-animated {
             font-size: 3.5em;
             letter-spacing: 3px;
@@ -159,7 +166,7 @@
         <a href="javascript:void(0)" onclick="showLogin('Personal Documents')">Personal Docs</a>
         <a href="javascript:void(0)" onclick="showLogin('Official Documents')">Official Docs</a>
         <a href="#">Contact</a>
-        <a href="YOUR_CV_FILE_PATH_HERE" download="Kishan_Kumar_Roy_CV" class="cv-btn">Download CV</a>
+        <a href="#" download="Kishan_Kumar_Roy_CV" class="cv-btn">Download CV</a>
     </nav>
 
     <header class="header-section">
@@ -183,7 +190,7 @@
     </div>
 
     <div class="content-area">
-        <p>Header and Navigation are ready. Next: Resume and Portfolio details.</p>
+        <p>Interface and CV button highlight updated. Ready for next step?</p>
     </div>
 
     <script>
