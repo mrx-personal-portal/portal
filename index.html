@@ -3,105 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Kumar Roy - Portfolio (K1 Edit)</title>
+    <title>Kishan Kumar Roy - Portfolio (K1 Original Base)</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #f4f7f6;
             overflow-x: hidden;
         }
 
-        /* --- Navbar --- */
+        /* --- Navbar: অরিজিনাল পজিশন --- */
         .navbar {
             position: absolute;
             top: 15px;
-            width: 96%;
-            left: 2%;
+            width: 100%;
             background: transparent;
             display: flex;
             justify-content: center;
-            align-items: center;
             padding: 10px 0;
             z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
             font-weight: 600;
-            font-size: 0.82em;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
             background: rgba(255, 255, 255, 0.1); 
             backdrop-filter: blur(10px);
-            padding: 10px 18px;
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 20px;
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
 
-        /* Download CV: অরেঞ্জ বাটন */
+        /* Download CV: অরেঞ্জ হাইলাইট বাটন */
         .cv-btn {
             background: #e67e22 !important;
             border: 1px solid #e67e22 !important;
             box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
         }
 
-        /* --- Header Section (75% Height) --- */
+        .navbar a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* --- Header Section: একদম সেই অরিজিনাল ৭৫% হাইট --- */
         .header-section {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* উপর থেকে শুরু হবে */
+            justify-content: center;
             align-items: center;
-            height: 75vh; 
+            height: 75vh; /* সকালের অরিজিনাল কোড অনুযায়ী ৭৫% */
             width: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                               url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: #ffffff;
             text-align: center;
-            padding-top: 180px; /* নেভিগেশন বার থেকে নামকে নিচে নামানোর গ্যাপ */
+            position: relative;
         }
 
         .header-content {
+            margin-top: 60px; 
             max-width: 850px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px; /* নাম, টাইটেল ও সামারি খুব কাছে রাখার জন্য */
+            padding: 0 20px;
         }
 
-        /* --- Animations --- */
+        /* --- Animation Logic: অরিজিনাল ১৪ সেকেন্ডের লুপ --- */
         .name-animated {
             font-size: 3.5em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             font-weight: 800;
-            animation: kishanSequence 14s infinite;
-            margin: 0;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+            display: block;
+            animation: kishanSequence 14s ease-in-out infinite;
         }
 
         .title-animated {
             font-size: 1.5em;
-            animation: juniorSequence 14s infinite;
-            margin: 0;
             color: #f1f1f1;
+            margin-top: 8px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            display: block;
+            animation: juniorSequence 14s ease-in-out infinite;
         }
 
         .welcome-msg {
             font-size: 1.05em;
-            margin-top: 15px;
+            color: #e0e0e0;
+            margin-top: 25px;
             font-style: italic;
+            line-height: 1.6;
+            font-weight: 300;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
             opacity: 0;
-            animation: msgSequence 14s infinite;
-            line-height: 1.4;
+            animation: msgSequence 14s ease-in-out infinite;
         }
 
         @keyframes kishanSequence {
@@ -117,12 +128,12 @@
         }
 
         @keyframes msgSequence {
-            0%, 25% { opacity: 0; }
-            35%, 75% { opacity: 1; }   
+            0%, 25% { opacity: 0; transform: scale(0.9); }
+            35%, 75% { opacity: 1; transform: scale(1); }   
             85%, 100% { opacity: 0; transform: translateY(100px); }
         }
 
-        /* --- Login Modal --- */
+        /* Modal Settings */
         .modal {
             display: none; 
             position: fixed;
@@ -140,37 +151,8 @@
             text-align: center;
         }
 
-        .modal-content input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .content-area {
+            height: 25vh; /* নিচের সাদা অংশ */
+            background: white;
         }
-
-        .modal-content button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a onclick="showLogin('Admin Dashboard Access')">Admin Dashboard</a>
-            <a href="#">Contact</a>
-            <a href="#" class="cv-btn">Download CV</a>
-        </div>
-    </nav>
-
-    <header class="header-section">
-        <div class="header-content">
-            <span class="name-animated">Kishan Kumar Roy</span>
+    </
