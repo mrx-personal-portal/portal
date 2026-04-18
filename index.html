@@ -13,15 +13,15 @@
             overflow-x: hidden;
         }
 
-        /* --- Updated Navigation: Button/Tab Look with Blur --- */
+        /* --- Updated Navigation: Moved to absolute Top --- */
         .navbar {
             position: absolute;
-            top: 0;
+            top: 10px; /* একদম ওপরের বর্ডার থেকে মাত্র ১০ পিক্সেল নিচে */
             width: 100%;
             background: transparent;
             display: flex;
             justify-content: center;
-            padding: 40px 0;
+            padding: 20px 0; /* প্যাডিং একটু কমিয়ে আরও ওপরে তোলা হয়েছে */
             z-index: 1000;
         }
 
@@ -30,35 +30,31 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: 600;
-            font-size: 0.95em;
+            font-size: 0.9em;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
-            
-            /* অপশনের ব্যাকগ্রাউন্ড এবং বর্ডার (গ্লাস লুক) */
             background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(8px); /* ব্যাকগ্রাউন্ড ঝাপসা করার জন্য */
+            backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            padding: 12px 25px;
-            border-radius: 50px; /* পিল শেপ বাটন */
+            padding: 10px 22px;
+            border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.4s ease;
         }
 
-        /* মাউস নিলে কি হবে */
         .navbar a:hover {
-            background: rgba(230, 126, 34, 0.8); /* আমাদের থিম অরেঞ্জ কালার */
+            background: rgba(230, 126, 34, 0.8);
             border-color: #e67e22;
-            transform: translateY(-3px); /* সামান্য উপরে উঠে আসবে */
-            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+            transform: translateY(-2px);
         }
 
         /* --- Header Section (75% Height) --- */
         .header-section {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: center; /* এটি কন্টেন্টকে মাঝখানে রাখবে */
             align-items: center;
             height: 75vh; 
             width: 100%;
@@ -72,7 +68,12 @@
             position: relative;
         }
 
-        /* --- Animation Logic (Kishan's Custom Transitions) --- */
+        /* কন্টেন্ট এরিয়াকে একটু নিচে নামানোর জন্য */
+        .header-content {
+            margin-top: 50px; 
+        }
+
+        /* --- Your Custom Animation Logic --- */
         .name-animated {
             font-size: 3.8em;
             letter-spacing: 3px;
@@ -189,12 +190,12 @@
             <h3 id="modalTitle">Login</h3>
             <input type="text" placeholder="User ID">
             <input type="password" placeholder="Password">
-            <button onclick="alert('Verification logic needed')">Access Files</button>
+            <button onclick="alert('Access Restricted')">Access Files</button>
         </div>
     </div>
 
     <div class="content-area">
-        <p>Scroll down for professional details.</p>
+        <p>Scroll down to see Professional Summary and Skills.</p>
     </div>
 
     <script>
