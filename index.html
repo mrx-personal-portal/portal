@@ -12,31 +12,31 @@
         }
 
         .header-section {
-            /* --- Updated: Background Image added --- */
-            /* Please place image_0.png in the same folder as this HTML file. */
+            /* অনলাইন ছবির লিঙ্ক যা সবাই দেখতে পাবে */
             background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
-                              url('image_0.png'); 
-            background-size: cover; /* Background fills the whole area */
-            background-position: center; /* Image centered */
+                              url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
+            
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             
             color: #ffffff;
-            padding: 80px 20px; /* Slightly increased padding for better image visibility */
+            padding: 80px 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .header-section h1 {
             margin: 0;
-            font-size: 3.2em; /* Slightly larger name */
+            font-size: 3.2em;
             letter-spacing: 1px;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds readability to text */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
 
         .header-section p.designation {
             font-size: 1.4em;
-            color: #ecf0f1; /* Lighter grey-blue for designation */
+            color: #ecf0f1;
             margin: 10px 0 35px 0;
             font-weight: 300;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
@@ -46,17 +46,17 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px; /* Increased gap */
-            font-size: 1.0em; /* Slightly larger contact info */
+            gap: 25px;
+            font-size: 1.0em;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.15); /* More visible background for contact items */
+            background: rgba(255, 255, 255, 0.15);
             padding: 10px 20px;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px); /* ঝাপসা ইফেক্ট যা প্রফেশনাল দেখায় */
         }
 
         .contact-item span {
