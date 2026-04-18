@@ -1,23 +1,100 @@
-<style>
-    .header-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 75vh; 
-        width: 100%;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan Kumar Roy - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            overflow-x: hidden;
+        }
+
+        /* Header Section (75% Height remains same) */
+        .header-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 75vh; 
+            width: 100%;
+            /* Updated Image: Includes Laptop and Engineering elements */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
+                              url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-bottom: 5px solid #e67e22;
+        }
+
+        /* --- Your Requested Animation Logic (Slower Speed & Bottom Drop) --- */
         
-        /* --- এখানেই ছবির লিঙ্ক পরিবর্তন করতে হবে --- */
-        /* আমি নিচে ল্যাপটপ এবং ইঞ্জিনিয়ারিং ডিজাইন আছে এমন একটি হাই-কোয়ালিটি লিঙ্ক দিয়েছি */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
-                          url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
-        
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: #ffffff;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        border-bottom: 5px solid #e67e22;
-    }
-</style>
+        .name-animated {
+            font-size: 3.8em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 800;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+            display: block;
+            animation: kishanSequence 12s ease-in-out infinite;
+        }
+
+        .title-animated {
+            font-size: 1.6em;
+            color: #f1f1f1;
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            display: block;
+            animation: juniorSequence 12s ease-in-out infinite;
+        }
+
+        @keyframes kishanSequence {
+            0% { opacity: 0; transform: translateX(150%); } 
+            15% { opacity: 1; transform: translateX(0); }   /* Slide to Center */
+            65% { opacity: 1; transform: translateX(0); }   /* Long Hold */
+            80% { opacity: 0; transform: translateY(150px); } /* Drop Bottom */
+            100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        @keyframes juniorSequence {
+            0% { opacity: 0; transform: translateX(-150%); } 
+            20% { opacity: 1; transform: translateX(0); }   /* Slide to Center */
+            65% { opacity: 1; transform: translateX(0); }   /* Long Hold */
+            80% { opacity: 0; transform: translateY(150px); } /* Drop Bottom */
+            100% { opacity: 0; transform: translateY(150px); }
+        }
+
+        .content-area {
+            height: 25vh;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="header-content">
+            <span class="name-animated">Kishan Kumar Roy</span>
+            <span class="title-animated">Junior Engineer (Mechanical)</span>
+        </div>
+    </header>
+
+    <div class="content-area">
+        <p>Your professional details will be added here next.</p>
+    </div>
+
+</body>
+</html>
